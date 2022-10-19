@@ -10,7 +10,7 @@ a.navbar {
 }
 .form-inline {
     display: flex;
-    flex-flow: row wrap;
+    flex-direction: row;
     align-items: center;
 }
 /*Add Margin for labels */
@@ -28,6 +28,7 @@ a.navbar {
 .form-inline button {
     padding: 10px 20px;
     border: 1px solid #ddd;
+    width: 20em;
 }
 form.navbar {
    align-content: flex-end;    

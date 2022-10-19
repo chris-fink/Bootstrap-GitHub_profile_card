@@ -45,3 +45,6 @@ form.addEventListener('submit', (e) => {
         search.value = '';
     }
 });
+
+    //preload a search for Denver weather so client doesn't see dummy data  
+    searchProfile.fetch(searchProfile(url));
