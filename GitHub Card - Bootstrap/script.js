@@ -1,5 +1,3 @@
-
-
 //variables for API
 const url = 'https://api.github.com/users/chris-fink';
 const main = document.querySelector('#card');
@@ -14,21 +12,31 @@ function searchProfile(url){
 
         //Create elements for HTML response
             const img = document.createElement('img');
+            const h5 = document.createElement('h5');
+            const h4 = document.createElement('h4');
             const h3 = document.createElement('h3');
             const h2 = document.createElement('h2');
-            const p = document.createElement('p');
+            const h1 = document.createElement('h1');
+            const h6 = document.createElement('h6');
 
         //Append elements to the main elements
             main.appendChild(img);
-            main.appendChild(h3);
+            main.appendChild(h1);
             main.appendChild(h2);
-            main.appendChild(p);
-            img.src = `${data.avatar_url}`;
+            main.appendChild(h4);
+            main.appendChild(h5); 
+            main.appendChild(h6);
+            main.appendChild(h3);
 
             //Display API data on elements
-            h3.innerHTML = ` Visit GitHub : <a href="${data.html_url}" target="_blank">${data.login}</a>`;
-            h2.innerHTML = `${data.name}`;
-            p.innerHTML = `${data.public_repos} Repositories`;
+            img.src = `${data.avatar_url}`;
+            h1.innerHTML = `${data.name}`;
+            h2.innerHTML = `${data.location}`;
+            //h3.innerHTML = ` Visit GitHub : <a href="${data.html_url}" target="_blank">${data.login}</a>`;
+            h3.innerHTML = `<a href="${data.html_url}" class="fa-brands fa-github fa-2xl" target="_blank"></a>`;
+            h4.innerHTML = `${data.public_repos} Repositories`;
+            h5.innerHTML =  `${data.following} Following`;
+            h6.innerHTML = `${data.followers} Followers`;      
     });
 }
 
